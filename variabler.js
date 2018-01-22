@@ -30,3 +30,5 @@ console.log(prisUdenMoms2);
 forste = 10; 
 anden = 20;
 
+ny
+
