@@ -42,3 +42,4 @@ else if (drik == "cola") {
 else {
     "ukendt"
 }
+console.log(drik);
