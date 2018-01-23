@@ -1,5 +1,5 @@
 var name = "Tamara";
-var alder = "1";
+var alder = 1;
 
 let byNavn = "Roskilde";
 console.log(byNavn);
@@ -17,7 +17,7 @@ console.log(z);
 var navn = "Tamara";
 var alder = "1";
 var efternavn = "Fanayei";
-console.log("Hej, jeg hedder"+" "  + navn+" "  + efternavn + "og jeg er" + alder + "år");
+console.log("Hej, jeg hedder "+ navn+" "  + efternavn + " og jeg er " + alder + "år");
 
 
 var moms = 1.25;
@@ -30,5 +30,5 @@ console.log(prisUdenMoms2);
 forste = 10; 
 anden = 20;
 
-ny
+
 
