@@ -43,3 +43,20 @@ else {
     "ukendt"
 }
 console.log(drik);
+
+
+Switch er alternativ til if else
+
+    let drik = "juice"
+
+switch (drik) {
+    case "cola":
+        noget kode ? 
+        break;
+
+    case "mælk":
+        break;
+
+    default:
+        break;
+}
