@@ -35,17 +35,23 @@
 // Skriv en funktion som tager imod en tekststreng
 // og returnerer true eller false afhængigt af om tekststrengen er et palindrom.
 
-var palindrom = "stets";
-console.log(drik);
-if (palindrom == "mælk") {
-    "test1"
-}
-else if (palindrom == "cola") {
-    "test2"
-}
-else {
-    "ukendt"
-}
-console.log(palidrom);
+// var palindrom = "stets";
+// console.log(drik);
+// if (palindrom == "mælk") {
+//     "test1"
+// }
+// else if (palindrom == "cola") {
+//     "test2"
+// }
+// else {
+//     "ukendt"
+// }
+// console.log(palidrom);
 
+weekend(day):
+if day == 'Saturday' or day == 'Sunday':
+return True
+    else:
+return False
 
+console.log();
