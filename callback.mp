@@ -85,3 +85,28 @@ let varer = ['cola', 'chips'];
 forberedData(varer, udskrivSomHTML);
 forberedData(varer, udskrivIRenTekst);
 forberedData(varer, gemITekstFil);
+
+
+Asynkronitet
+
+I stedet for at vente på, at der køres den første kode, kører den på samme tid. 
+Lidt som at have mange bolde i luften. 
+
+Her køres funktionerne ikke i kodens struktur.
+
+
+function getData(dataURI, outputData) { //her defineres funktionen og den modtager to argumenter.
+    console.log('første linje i getData funktionen...'); // Første linje der udskrives, når funktionen getData kaldes.- 
+    let timer = setTimeout(function () { //her tages den ud af flowet og køres i en seperat tråd, men først efter 2 sek. I mellem tiden køres sidste linje i koden.  setTimeout er en javascripft funktion. 
+        console.log('Her der der gået 2 sekunder.'); // viser at der er gået 2 sek. Den sidste linje er nu vist. 
+        let dataArray = [12, 34, 56, 78, 90, 123, 456, 789]; //et array der vises efter 2 sek. 
+        outputData(dataArray);
+    }, 2000); // når der gået 2 sek, så køres de tre ovenstående linjer console.log('her..) -Array);
+} //inden da køres den nederst linje. 
+
+function outputData(dataArray) { // en funktion med med et argument. Den udskriver teksten og det tilhørende Array. 
+    console.log('Dette er funktionen der udskriver det hentede data: ' + dataArray);
+}
+
+getData('http://www.domain.com/something', outputData);
+console.log("Denne kode linje burde være den sidste."); //Den linje køres før den burde. Men setTimer gør, at den efterfølgende kode venter 2 sek. med at køre. I mellem tiden køres denne linje.   
