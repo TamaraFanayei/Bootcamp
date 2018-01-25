@@ -13,7 +13,7 @@ function thirdPromise(someBoolValue) {
     })
 }
 
-thirdPromise(true)
+thirdPromise(true) // kan ændres til false. Så sender den til .catch. Ved true sende til .then.  
     .then(success => {
         console.log(success);
         //throw new Error('lad os sige noget gik galt!');
