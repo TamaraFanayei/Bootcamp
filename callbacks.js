@@ -47,7 +47,7 @@ function drik(læskedrik) {
     console.log('<p>' + læskedrik + '<p>');
 }
 
-function åbenDrik(læskedrik, next) {
+function åbenDrik(læskedrik, next) { // læskedrik henviser til "cola" i åbenDrik og next til drik. 
     // gøre en masse med læskedrik... 
 
     next(læskedrik); // her blevet next en function. 
@@ -55,8 +55,6 @@ function åbenDrik(læskedrik, next) {
 } // for udføre ovenstående skal funktionen kaldes. 
 
 åbenDrik("cola", drik);
-
-
 
 
 
