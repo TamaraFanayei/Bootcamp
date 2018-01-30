@@ -90,3 +90,6 @@ function gange(x, y) {
 console.log(gange(2, 'hans')); <--- her returner den med 0, da 'hans'er en string. 
 console.log(gange(2)); <-- her returner den med -1, da y er undefined. 
 console.log(gange(2, 6)) <-- Her ganger den x og y, da den er opfyldt. der er tal. 
+
+
+ 
