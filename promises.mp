@@ -39,10 +39,47 @@ secondPromise
    console.log(errorMessage);
 });
 
-Resolve og then er det samme
-Reject og catch
+Ser man resolve så ved man, at man er inde i Promise. 
+Resolve og .then er det samme 
+Reject og .catch
 
 
 En måde at køre noget kode på. Starter ved then. 
 Fx et login system. Reject eller resolve. Ja til login, hvis det er intastet
 korrekt og reject hvis det er forkert. fx forkort password. 
+
+___________
+
+Eks med en funktion der implemeterer en promise. Den skal returnere et nyt promise. Den svarer tilbage med return (et promise)
+
+Vi kalder vores funktion som her under hedder thirdPromis. Er det en succus ryger den ned til .then. 
+Fejler den så ryger den ned i .catch. 
+
+Gør det her, og når du er færdig, så gør det her. 
+
+function thirdPromise(someBoolValue) {
+   return new Promise((resolve, reject) => {
+      setTimeout(() => {
+         if (someBoolValue) {
+            resolve('Denne besked kommer fra "resolve"');
+         } else {
+            reject(new Error('Det var ikke en succes, dette kommer fra "reject"'));
+         }
+      }, 2000);
+   })
+}
+
+thirdPromise(true)
+   .then(success => {
+      console.log(success);
+      //throw new Error('lad os sige noget gik galt!');
+      return 'Information sendes videre';
+   }).then(nextSuccess => {
+      console.log(nextSuccess);
+   }).catch((error) => {
+      console.log(error);
+   })
+
+
+
+Bruges i forbindelse med fetch objektet. 
